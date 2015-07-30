@@ -6,47 +6,61 @@
   // color: #EFEFEF
   color: #C3C1C1
 
+html, body, .lightbox-wrapper
+  height: 100%
 
 body
   background-color: rgba(211, 211, 211, 0.67)
-  .lightbox
-    opacity: 0
-    width: 30%
-    margin: auto
-    .reset
-      @include horizontal-style
-      width: 10%
-      padding: 2rem
-      button
-        padding: 1rem
-    .header
-      height: 2rem
-      // font-family: sans-serif
-      // color: #EFEFEF
-      font-size: 1.5rem
-      @include progress-font
-      background-color: grey
-      padding: 0.2rem
-      .title
-        float: left
-      .dismiss
-        float: right
-        width: 5%
-    .progress
-      padding: 1rem
-      background-color: white
-      height: 3rem
-      .progress-bar
-        margin: auto
-        width: 50%
-        height: 1rem
-        background-color: white
-        border-style: solid
-        border-width: thin
-        .progress-meter
-          width: 0%
-          height: 100%
-          background-color: blue
-      .progress-message
-        font-size: 1.2rem
+  .lightbox-wrapper
+    position: relative
+    .lightbox
+      // CENTERING - VERTICAL & HORIZONTAL
+      position: absolute
+      top: 50%
+      left: 50%
+      height: 200px
+      margin-left: -15%
+      margin-top: -100px
+
+      // For modern non-IE-8-ish things
+      opacity: 0
+      width: 30%
+      // margin: auto
+      .reset
+        @include horizontal-style
+        width: 10%
+        padding: 2em
+        button
+          padding: 1em
+      .header
+        height: 2em
+        // font-family: sans-serif
+        // color: #EFEFEF
+        font-size: 1.5rem
         @include progress-font
+        background-color: grey
+        padding: 0.2em
+        .title
+          float: left
+        .dismiss
+          float: right
+          width: 5%
+      .progress
+        clear: both
+        padding: 1em
+        background-color: white
+        height: 3em
+        .progress-bar
+          margin: auto
+          width: 50%
+          height: 1em
+          background-color: white
+          border-style: solid
+          border-width: thin
+          .progress-meter
+            width: 0%
+            height: 100%
+            background-color: blue
+        .progress-message
+          font-size: 1.2em
+          @include progress-font
