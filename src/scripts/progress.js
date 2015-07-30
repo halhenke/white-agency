@@ -12,7 +12,7 @@ resetButton.onclick = function () {
 dismissButton.onclick = function () {
   $('.lightbox').animate({
     opacity: 0
-  }, 3000, "linear", function() {
+  }, 1000, "linear", function() {
     console.log('Gone...');
   });
 
