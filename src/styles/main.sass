@@ -1,6 +1,12 @@
 @mixin horizontal-style
   margin: auto
 
+@mixin progress-font
+  font-family: sans-serif
+  // color: #EFEFEF
+  color: #C3C1C1
+
+
 body
   background-color: rgba(211, 211, 211, 0.67)
   .lightbox
@@ -13,9 +19,10 @@ body
       padding: 2rem
     .header
       height: 2rem
+      // font-family: sans-serif
+      // color: #EFEFEF
       font-size: 1.5rem
-      font-family: sans-serif
-      color: #EFEFEF
+      @include progress-font
       background-color: grey
       padding: 0.2rem
       .title
@@ -38,3 +45,6 @@ body
           width: 0%
           height: 100%
           background-color: blue
+      .progress-message
+        font-size: 1.2rem
+        @include progress-font
