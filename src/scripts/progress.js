@@ -10,12 +10,14 @@ resetButton.onclick = function () {
 
 var progressUpdate = function () {
   if (progress <= 100) {
+    progressMeter.style['background-color'] = 'blue';
     progressMeter.style.width = `${progress}%`;
     progressMessage.innerHTML = `Progress ${progress}%`;
     progress += 1;
   }
   else {
     progressMessage.innerHTML = `This task is ${progress - 1} complete.%`;
+    progressMeter.style['background-color'] = 'green';
   }
 
 }
