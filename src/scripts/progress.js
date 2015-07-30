@@ -23,5 +23,10 @@ var progressUpdate = function () {
 }
 
 window.onload = function () {
-  window.setInterval(progressUpdate, 100);
+  $.getJSON("public/data.json", function (data) {
+    // players = data.players;
+    console.log("Speed fetched....");
+    window.setInterval(progressUpdate, data.speed);
+  });
+  // window.setInterval(progressUpdate, 100);
 };
