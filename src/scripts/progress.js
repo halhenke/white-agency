@@ -26,7 +26,7 @@ var progressUpdate = function () {
     progress += 1;
   }
   else {
-    progressMessage.innerHTML = `This task is ${progress - 1} complete.%`;
+    progressMessage.innerHTML = `This task is ${progress - 1}% complete.`;
     progressMeter.style['background-color'] = 'green';
   }
 
