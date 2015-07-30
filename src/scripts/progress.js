@@ -4,6 +4,9 @@ var resetButton = document.querySelector('.lightbox .reset button');
 var dismissButton = document.querySelector('.lightbox .header .dismiss');
 var progress = 0;
 
+// For IE 8
+$('.lightbox').attr('opacity', 0);
+
 resetButton.onclick = function () {
   console.log('Button clicked...');
   progress = 0;
@@ -34,7 +37,6 @@ var progressUpdate = function () {
 
 window.onload = function () {
   $.getJSON("public/data.json", function (data) {
-    // players = data.players;
     console.log(`Speed fetched: ${data.speed}`);
     $('.lightbox').animate({
       opacity: 1
