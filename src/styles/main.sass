@@ -3,13 +3,14 @@
 
 body
   background-color: rgba(211, 211, 211, 0.67)
-  .reset
-    @include horizontal-style
-    width: 10%
-    padding: 2rem
   .lightbox
+    opacity: 0
     width: 50%
     margin: auto
+    .reset
+      @include horizontal-style
+      width: 10%
+      padding: 2rem
     .header
       height: 2rem
       font-size: 1.5rem
@@ -17,6 +18,11 @@ body
       color: #EFEFEF
       background-color: grey
       padding: 0.2rem
+      .title
+        float: left
+      .dismiss
+        float: right
+        width: 5%
     .progress
       padding: 1rem
       background-color: white
