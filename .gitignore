@@ -1,1 +1,4 @@
 node_modules
+.gobble-build
+.gobble-watch
+.gobble
