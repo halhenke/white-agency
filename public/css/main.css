@@ -1,0 +1,60 @@
+html, body, .lightbox-wrapper {
+  height: 100%; }
+
+body {
+  background-color: lightgray; }
+  body .lightbox-wrapper {
+    position: relative; }
+    body .lightbox-wrapper .lightbox {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 300px;
+      margin-left: -15%;
+      margin-top: -150px;
+      opacity: 0;
+      width: 30%; }
+      body .lightbox-wrapper .lightbox .reset {
+        margin: auto;
+        width: 10%;
+        padding: 2em;
+        display: table; }
+        body .lightbox-wrapper .lightbox .reset button {
+          padding: 1em; }
+      body .lightbox-wrapper .lightbox .header {
+        height: 2em;
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        color: #C3C1C1;
+        background-color: grey;
+        padding: 0.2em; }
+        body .lightbox-wrapper .lightbox .header .title {
+          float: left; }
+        body .lightbox-wrapper .lightbox .header .dismiss {
+          float: right;
+          width: 5%; }
+      body .lightbox-wrapper .lightbox .progress {
+        clear: both;
+        padding: 1em;
+        background-color: white;
+        height: 5em; }
+        body .lightbox-wrapper .lightbox .progress .progress-bar {
+          margin: 1em auto;
+          width: 50%;
+          height: 1em;
+          background-color: white;
+          border-style: solid;
+          border-width: thin; }
+          body .lightbox-wrapper .lightbox .progress .progress-bar .progress-meter {
+            width: 0%;
+            height: 100%;
+            background-color: blue; }
+        body .lightbox-wrapper .lightbox .progress .progress-message {
+          font-size: 1.2em;
+          font-family: sans-serif;
+          color: #C3C1C1;
+          text-align: center;
+          padding: 0.4em 0; }
+          body .lightbox-wrapper .lightbox .progress .progress-message span.octicon-check {
+            color: green; }
+/*# sourceMappingURL=main.css.map */
