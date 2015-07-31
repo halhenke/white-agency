@@ -8,7 +8,6 @@ var progress = 0;
 $('.lightbox').attr('opacity', 0);
 
 resetButton.onclick = function () {
-  console.log('Button clicked...');
   progress = 0;
 }
 
@@ -16,7 +15,6 @@ dismissButton.onclick = function () {
   $('.lightbox').animate({
     opacity: 0
   }, 1000, "linear", function() {
-    console.log('Gone...');
   });
 
 }
@@ -37,14 +35,10 @@ var progressUpdate = function () {
 
 window.onload = function () {
   $.getJSON("public/data.json", function (data) {
-    console.log(`Speed fetched: ${data.speed}`);
     $('.lightbox').animate({
       opacity: 1
     }, 3000, "linear", function() {
       window.setInterval(progressUpdate, data.speed);
     });
-
-    // window.setInterval(progressUpdate, data.speed);
   });
-  // window.setInterval(progressUpdate, 100);
 };
