@@ -1,7 +1,7 @@
 var progressMeter = document.querySelector('.lightbox .progress .progress-meter');
 var progressMessage = document.querySelector('.lightbox .progress .progress-message');
 var resetButton = document.querySelector('.lightbox .reset button');
-var dismissButton = document.querySelector('.lightbox .header .dismiss');
+var dismissButton = document.querySelector('.lightbox .header .dismiss span.octicon-check');
 var progress = 0;
 
 // For IE 8
@@ -27,7 +27,7 @@ var progressUpdate = function () {
     progress += 1;
   }
   else {
-    progressMessage.innerHTML = `This task is ${progress - 1}% complete.`;
+    progressMessage.innerHTML = `This task is ${progress - 1}% complete. <span class="mega-octicon octicon-check"></span>`;
     progressMeter.style['background-color'] = 'green';
   }
 
