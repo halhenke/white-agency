@@ -1,16 +1,21 @@
+// COLOR VARIABLES
+$bg-color:    rgb(211, 211, 211)
+$font-color:  #C3C1C1
+
+// MIXINS
 @mixin horizontal-style
   margin: auto
 
 @mixin progress-font
   font-family: sans-serif
-  // color: #EFEFEF
   color: #C3C1C1
 
+// RULES
 html, body, .lightbox-wrapper
   height: 100%
 
 body
-  background-color: rgba(211, 211, 211, 0.67)
+  background-color: $bg-color
   .lightbox-wrapper
     position: relative
     .lightbox
@@ -18,9 +23,10 @@ body
       position: absolute
       top: 50%
       left: 50%
-      height: 200px
+      // Include Reset Button as part of lightbox
+      height: 300px
       margin-left: -15%
-      margin-top: -100px
+      margin-top: -150px
 
       // For modern non-IE-8-ish things
       opacity: 0
@@ -35,8 +41,6 @@ body
           padding: 1em
       .header
         height: 2em
-        // font-family: sans-serif
-        // color: #EFEFEF
         font-size: 1.5rem
         @include progress-font
         background-color: grey
